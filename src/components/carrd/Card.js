@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Card.module.scss";
 import Demo1_IMG from "../../assets/images/demo/demo-01.png";
 import Demo1_icon from "../../assets/images/demo/ci_group.png";
@@ -12,11 +12,39 @@ export default function Card({
   range = "4.5",
   monney = "30.5$",
 }) {
+
+  const [color, setColor] = useState("red");
+
+  const onClickCard = () => {
+    if (color === "red") { 
+      setColor("green");
+    } else {
+      setColor("red");
+    }
+  }
+
+
+  useEffect(() => {
+    console.log("On change color []");
+    return () => {
+      console.log("");
+    }
+  }, []);
+
+
+  useEffect(() => {
+    console.log("On change color null");
+  });
+
+  useEffect(() => {
+    console.log("On change color [color]");
+  }, [color]);
+
   return (
-    <div className={style.card}>
+    <div className={style.card} onClick={onClickCard}>
       <img src={image} alt="" />
       <div className={style.title}>
-        <h4>{title}</h4>
+        <h4 style={{color: color}}>{title}</h4>
         <span>
           <img src={Demo1_icon_2} alt="" />
           {range}

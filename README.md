@@ -80,3 +80,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import $ from 'jquery';
 import Popper from 'popper.js';
+
+# Install Reactstrap
+### `npm i reactstrap`
+
+# install `font-awesome`
+### `npm install --save @fortawesome/fontawesome-free`
+# Free icons styles
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+
+
+# Free icons bootstrap
+npm install react-bootstrap-icons --save
+
