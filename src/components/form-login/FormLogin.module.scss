@@ -1,0 +1,78 @@
+.formLogin {
+  h3{
+    color: #000;
+    font-family: Poppins;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+
+  h4 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    span {
+      color: #0089ED;
+      font-family: Poppins;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}
+
+.fromItem{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 10px;
+  label{
+    padding: 10px 0;
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  input{
+    height: 54px;
+    border-radius: 9px;
+    border: solid 1px #ADADAD;
+    background-color: #fff;
+    padding: 5px 10px;
+  }
+  button{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    border-radius: 10px;
+    background: #0089ED;
+    box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.30);
+    border: unset;
+    height: 54px;
+    flex-shrink: 0;
+    margin-top: 20px;
+  }
+  a{
+    margin-left: auto;
+    padding: 10px 0;
+  }
+}

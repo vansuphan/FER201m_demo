@@ -12,7 +12,6 @@ import {
   NavLink,
   Navbar,
   NavbarBrand,
-  NavbarText,
   NavbarToggler,
   UncontrolledDropdown,
   Button,

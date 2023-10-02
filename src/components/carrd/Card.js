@@ -23,19 +23,15 @@ export default function Card({
     }
   }
 
-
   useEffect(() => {
     console.log("On change color []");
     return () => {
       console.log("");
     }
   }, []);
-
-
   useEffect(() => {
     console.log("On change color null");
   });
-
   useEffect(() => {
     console.log("On change color [color]");
   }, [color]);

@@ -95,3 +95,22 @@ npm i --save @fortawesome/free-brands-svg-icons
 # Free icons bootstrap
 npm install react-bootstrap-icons --save
 
+# setup json server `https://github.com/typicode/json-server`
+
+# Install
+# `npm install -g json-server`
+# Create a file db.json
+```javascript
+{
+    "posts": [
+      { "id": 1, "title": "json-server", "author": "typicode" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+  }
+```
+
+# Start JSON Server
+# `json-server --watch db.json`
