@@ -14,7 +14,7 @@ $carousel-item-height: 40px;
   // @include red-mixin();
   position: relative;
   .container{
-    padding: 30px;
+    padding: 45px;
     width: 100%;
     max-width: 1300px;
     display: flex;
@@ -48,6 +48,7 @@ $carousel-item-height: 40px;
     h3{
       font-size: 24px;
       font-weight: 400;
+      padding-bottom: 20px;
     }
     p{
       font-size: 13px;
