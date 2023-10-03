@@ -12,7 +12,7 @@ $carousel-item-height: 40px;
 .LoginPage{
   // @include zero-margin(1px, $carousel-item-height);
   // @include red-mixin();
-  
+
   position: relative;
   .container{
     padding: 45px;
@@ -64,6 +64,7 @@ $carousel-item-height: 40px;
 
 .LoginForm{
   position: absolute;
+  z-index: 3;
   width: 500px;
   background-color: #fff;
   right: 30px;

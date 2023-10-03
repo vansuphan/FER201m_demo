@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./LoginPage.module.scss";
 // import FormLogin from '../../components/form-login/FormLogin';
 import FormLoginNormal from "../../components/form-login/FormLoginNormal";
 import SalyImg from "../../assets/images/Saly-1.png";
-import Ellipse3 from '../../assets/images/Ellipse3.png';
-import Ellipse4 from '../../assets/images/Ellipse4.png';
-import CancelIcon from '../../assets/icons/icon-cancel.png';
-
+import Ellipse3 from "../../assets/images/Ellipse3.png";
+import Ellipse4 from "../../assets/images/Ellipse4.png";
+import CancelIcon from "../../assets/icons/icon-cancel.png";
+import FormLoginNormalUncontrolled from "../../components/form-login/FormLoginNormalUncontrolled";
 
 export default function LoginPage() {
   return (
@@ -25,7 +25,8 @@ export default function LoginPage() {
             <img alt="" srcSet={SalyImg} />
           </div>
           <div className={styles.LoginForm}>
-            <FormLoginNormal />
+            {/* <FormLoginNormal /> */}
+            <FormLoginNormalUncontrolled />
           </div>
         </div>
       </section>

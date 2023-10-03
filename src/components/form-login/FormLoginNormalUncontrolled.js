@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./FormLogin.module.scss";
 import { Link } from "react-router-dom";
@@ -6,50 +6,20 @@ import GoogleIcon from "../../assets/icons/google.png";
 import FbIcon from "../../assets/icons/facebook.png";
 import AppleIcon from "../../assets/icons/apple.png";
 
-export default function FormLoginNormal() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+export default function FormLoginNormalUncontrolled() {
   const [error, setError] = useState({ username: null, password: null });
-
-  const onChangeUsername = (e) => {
-    let errorData = { ...error };
-    if (e.target?.value === "") {
-      errorData = {
-        ...errorData,
-        username: "Please enter username",
-      };
-      setError(errorData);
-    } else {
-      errorData = {
-        ...errorData,
-        username: null,
-      };
-      setError(errorData);
-    }
-    setUsername(e.target.value);
-  };
-
-  const onChangePassword = async (e) => {
-    let errorData = { ...error };
-    if (e.target?.value === "") {
-      errorData = {
-        ...errorData,
-        password: "Please enter password",
-      };
-      setError(errorData);
-    } else {
-      errorData = {
-        ...errorData,
-        password: null,
-      };
-      setError(errorData);
-    }
-    setPassword(e.target.value);
-  };
+  const usernameRef = useRef("");
+  const passwordRef = useRef("");
 
   const onValidationsForm = () => {
-    let errorData = { ...error };
-    if (!username || username.trim() === "") {
+    let errorData = {
+      username: null,
+      password: null,
+    };
+    if (
+      !usernameRef?.current?.value ||
+      usernameRef?.current?.value.trim() === ""
+    ) {
       errorData = {
         ...errorData,
         username: "Please enter username",
@@ -60,7 +30,10 @@ export default function FormLoginNormal() {
         username: null,
       };
     }
-    if (!password || !password.trim() === "") {
+    if (
+      !passwordRef?.current?.value ||
+      !passwordRef?.current?.value.trim() === ""
+    ) {
       errorData = {
         ...errorData,
         password: "Please enter password",
@@ -74,12 +47,14 @@ export default function FormLoginNormal() {
     setError({ ...errorData });
   };
 
-  const onSubmit = () => {
+  const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(event);
     if (
-      username.trim() === "" ||
-      password.trim() === "" ||
-      !password ||
-      !username
+      usernameRef?.current?.value.trim() === "" ||
+      passwordRef?.current?.value.trim() === "" ||
+      !passwordRef?.current?.value ||
+      !usernameRef?.current?.value
     ) {
       onValidationsForm();
     } else {
@@ -88,18 +63,14 @@ export default function FormLoginNormal() {
         password: null,
       });
       return {
-        username,
-        password,
+        username: usernameRef?.current?.value,
+        password: passwordRef?.current?.value,
       };
     }
   };
 
-  useEffect(() => {
-    setError({ username: null, password: null });
-  }, []);
-
   return (
-    <form className={styles.formLogin}>
+    <form className={styles.formLogin} onSubmit={onSubmit}>
       <div className={styles.top}>
         <h4>
           Welcome to <span>LOREM</span>
@@ -130,8 +101,7 @@ export default function FormLoginNormal() {
           maxLength={255}
           name="username"
           placeholder="Username or email address"
-          value={username}
-          onChange={onChangeUsername}
+          ref={usernameRef}
         />
         {error?.username && <p className={styles.error}>{error?.username}</p>}
       </div>
@@ -143,16 +113,13 @@ export default function FormLoginNormal() {
           type="text"
           maxLength={255}
           placeholder="Password"
-          value={password}
-          onChange={onChangePassword}
+          ref={passwordRef}
         />
         {error?.password && <p className={styles.error}>{error?.password}</p>}
         <a href="#">Forgot Password</a>
       </div>
       <div className={styles.fromItem}>
-        <button type="button" onClick={onSubmit}>
-          Sign in
-        </button>
+        <button type="submit">Sign in</button>
       </div>
     </form>
   );
