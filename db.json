@@ -1,4 +1,12 @@
 {
+  "user": [
+    { "id": 1, "username": "admin", "password": "123" },
+    { "id": 1, "username": "suphan", "password": "123" }
+  ],
+  "messages": [
+    { "id": 1, "messages": "Hello", "sender": "admin" },
+    { "id": 2, "messages": "Hello", "sender": "mr.su" }
+  ],
   "posts": [
     { "id": 1, "title": "json-server", "author": "typicode" }
   ],
