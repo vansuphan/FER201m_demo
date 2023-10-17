@@ -12,10 +12,11 @@ import { Provider } from 'react-redux';
 // import { store } from './libs/redux/store';
 import { store } from './libs/redux/storeReactRedux';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <BrowserRouter>
     <Provider store={store}>
-      <App />
+        <App />
     </Provider>
   </BrowserRouter>
 );

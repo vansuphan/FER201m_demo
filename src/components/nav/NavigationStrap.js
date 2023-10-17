@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { Nav, NavItem,  } from "reactstrap";
 
 export default function NavigationStrap() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
  
   // useEffect(() => {
   //   if (true) {
@@ -13,7 +13,6 @@ export default function NavigationStrap() {
   return (
     <Nav >
       <NavItem>
-       
           <NavLink to={{pathname: "/home"}}>Home</NavLink>
       </NavItem>
       <NavItem>

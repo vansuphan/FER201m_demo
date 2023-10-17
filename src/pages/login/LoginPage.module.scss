@@ -12,6 +12,7 @@ $carousel-item-height: 40px;
 .LoginPage{
   // @include zero-margin(1px, $carousel-item-height);
   // @include red-mixin();
+  min-height: 100vh;
 
   position: relative;
   .container{

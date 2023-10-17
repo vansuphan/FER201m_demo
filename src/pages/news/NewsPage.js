@@ -11,8 +11,8 @@ export default function NewsPage() {
     console.log("query: ", query.get('name'));
   }, [])
   return (
-    <div>
-      <NavigationStrap />
+    <div style={{minHeight: "100vh"}}>
+      {/* <NavigationStrap /> */}
       
       <h3>NewsPage: {query.get('name')}</h3>
     </div>

@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "../../components/navbar/Navbar";
-import NavigationStrap from "../../components/nav/NavigationStrap";
 import { useState } from "react";
 import styles from "./HomePage.module.scss";
 import { Button } from "reactstrap";
@@ -8,11 +6,16 @@ import { counterActions } from "../../libs/redux/actions/counterActions";
 import { useDispatch, useSelector } from "react-redux";
 import { getMessager } from "../../libs/redux/actions/messagerAction";
 import { store } from "../../libs/redux/store";
+import Card from "../../components/carrd/Card";
+import { Fade, FadeIn, FadeOut, Rotate, Slide, SlideInDown } from "react-animated-components";
 // import { store as storeThunk } from "../../libs/redux/storeReactRedux";
 
 export default function HomePage() {
   const [value, setValue] = useState(store.getState());
   const dispatch = useDispatch();
+
+  const [didEnter, setDidEnter] = React.useState(false)
+  const onDidEnter = () => setDidEnter(true)
 
   const messagerPayload = useSelector(
     (states) => states.messagerReducer?.payload
@@ -41,8 +44,6 @@ export default function HomePage() {
 
   return (
     <div className={styles.HomePage}>
-      <Navbar />
-      <NavigationStrap />
       <hr />
       <section className="section-1 mt-5">
         <div className="container">
@@ -64,8 +65,11 @@ export default function HomePage() {
         <hr />
 
         <div>
-          <p className="p-3">{loadingMessager ? "loading = true" : "loading = true"}</p>
-          {messagerPayload && messagerPayload?.length > 0 && (
+          <p className="p-3">
+            {loadingMessager ? "loading = true" : "loading = true"}
+          </p>
+          {messagerPayload &&
+            messagerPayload?.length > 0 &&
             messagerPayload?.map((value, index) => {
               return (
                 <p key={index}>
@@ -73,17 +77,34 @@ export default function HomePage() {
                   {value?.messages}
                 </p>
               );
-            })
-          )}
+            })}
         </div>
         <div>
-          <Button
-            type="button"
-            onClick={onGetMessages}
-            className="btn-success"
-          >
+          <Button type="button" onClick={onGetMessages} className="btn-success">
             Get Messages
           </Button>
+        </div>
+        <hr />
+        <div className="container" style={{ overflowX: "hidden" }}>
+          {/* <FadeOut active={didEnter}>
+            <SlideInDown onComplete={onDidEnter}>🥧</SlideInDown>
+          </FadeOut> */}
+          <Slide direction="right" durationMs={1000}>
+            <Card />
+          </Slide>
+          <FadeIn>
+            <Rotate>🥧</Rotate>
+          </FadeIn>
+          <Fade>
+            <Card />
+          </Fade>
+          <Fade delayMs={500}>
+            <Card />
+          </Fade>
+          <Fade delayMs={1000}>
+            <Card />
+          </Fade>
+          
         </div>
       </section>
       <hr />
