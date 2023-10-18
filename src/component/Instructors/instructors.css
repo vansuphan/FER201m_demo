@@ -1,0 +1,48 @@
+#instructors * {
+ white-space: nowrap;
+  font-family: 'Poppins';
+}
+
+#instructors .instructor-container {
+  position: relative;
+}
+
+#instructors .instructor-container .big-avatar {
+  transition: 0.5s ease;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  /* clip-path: circle(); */
+}
+
+#instructors .instructor-container:hover .big-avatar {
+  opacity: 0;
+}
+#instructors .instructor-container .instructor-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+#instructors .instructor-container:hover .instructor-overlay {
+  width: 100%;
+  opacity: 1;
+}
+
+#instructors .instructor-container .instructor-overlay img {
+  width: 5em;
+  height: 5em;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#instructors .instructor-container .instructor-overlay blockquote {
+  font-size: 1.1rem;
+}

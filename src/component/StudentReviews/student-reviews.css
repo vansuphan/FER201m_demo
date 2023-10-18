@@ -1,0 +1,25 @@
+#student-reviews * {
+	font-family: 'Poppins';
+}
+
+#student-reviews h1, #student-reviews h2 {
+	font-weight: bold;
+}
+
+#student-reviews .span-students{
+	background-image: url(./assets/underline.png);
+	background-size: 100%;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	color: #09B451;
+}
+
+#student-reviews .student-comment {
+	width: 95%;
+	aspect-ratio: 1;
+	border-radius: 0.5em;
+}
+
+#student-reviews .student-comment img {
+	width: 100%;
+}

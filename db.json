@@ -1,21 +1,150 @@
 {
-
-  "user": [
-    { "id": 1, "username": "admin", "password": "123" },
-    { "id": 1, "username": "suphan", "password": "123" }
+  "login": [
+    {
+      "id": 1,
+      "username": "admin@fpt.com",
+      "password": "admin@123",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "supv@fpt.com",
+      "password": "su@123",
+      "role": "TEACHER"
+    },
+    {
+      "id": 4,
+      "username": "student@fpt.com",
+      "password": "student@123",
+      "role": "STUDENT"
+    }
   ],
-  "messages": [
-    { "id": 1, "messages": "Hello", "sender": "admin" },
-    { "id": 2, 
-      "title": "Learn Marketing from Top Instructors.",
-      "messages": "Hello", "sender": "mr.su" }
+  "users": [
+    {
+      "id": 1,
+      "username": "admin@fpt.com",
+      "password": "admin@123",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "supv@fpt.com",
+      "password": "su@123",
+      "role": "TEACHER"
+    },
+    {
+      "id": 4,
+      "username": "student@fpt.com",
+      "password": "student@123",
+      "role": "STUDENT"
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "name": "Administrator",
+      "email": "admin@fpt.com",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Su Phan",
+      "email": "supv@fpt.com",
+      "image": "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-1/286840873_5149156201865276_8221701214692303290_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CuAqs7qE8HgAX9FrwLA&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfB29538z3EtV8o9zastsuZ7NCsOceQ7GZrIp9PJGYdkPg&oe=65337296"
+    },
+    {
+      "id": 4,
+      "name": "Student 4",
+      "email": "supv@fpt.com",
+      "image": "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-1/286840873_5149156201865276_8221701214692303290_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CuAqs7qE8HgAX9FrwLA&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfB29538z3EtV8o9zastsuZ7NCsOceQ7GZrIp9PJGYdkPg&oe=65337296"
+    }
   ],
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 1, "title": "Learn Marketing from Top Instructors.", "money": "30.5$",  "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 1,
+      "title": "Learn Marketing from Top Instructors.",
+      "money": "30.5$",
+      "author": "typicode"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "messages": "Hello",
+      "sender": "admin"
+    },
+    {
+      "id": 2,
+      "title": "Learn Marketing from Top Instructors.",
+      "messages": "Hello",
+      "sender": "mr.su"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
-  "profile": { "name": "typicode" }
+  "landing-page": {
+    "banner-section": {
+      "image": ""
+    }
+  },
+  "courses": [
+    {
+      "image": "/assets/image/workTogether.png",
+      "title": "Learn Marketing From Top Instructors",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 1500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/image2.png",
+      "title": "Front-end development is not hard as you think",
+      "rate": "4.5",
+      "weeks": 3,
+      "students": 1200,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/ux.png",
+      "title": "Everrything you need to know in UX",
+      "rate": "4.5",
+      "weeks": 7,
+      "students": 1000,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/Ease.png",
+      "title": "Learn photography with ease",
+      "rate": "4.5",
+      "weeks": 5,
+      "students": 2500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/DataAnalysis.png",
+      "title": "Be a pro in data analysis",
+      "rate": "4.5",
+      "weeks": 6,
+      "students": 5500,
+      "price": "30.5$"
+    },
+    {
+      "image": "/assets/image/Hacking.png",
+      "title": "Ethical Harking is not hard as you think",
+      "rate": "4.5",
+      "weeks": 4,
+      "students": 4500,
+      "price": "30.5$"
+    }
+  ]
 }

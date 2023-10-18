@@ -23,30 +23,16 @@ export default function Card({
     }
   }
 
-  useEffect(() => {
-    console.log("On change color []");
-    return () => {
-      console.log("");
-    }
-  }, []);
-  useEffect(() => {
-    console.log("On change color null");
-  });
-  useEffect(() => {
-    console.log("On change color [color]");
-  }, [color]);
-
   return (
     <div className={style.card} onClick={onClickCard}>
       <img src={image} alt="" />
       <div className={style.title}>
-        <h4 style={{color: color}}>{title}</h4>
+        <h4>{title}</h4>
         <span>
           <img src={Demo1_icon_2} alt="" />
           {range}
         </span>
       </div>
-
       <div className={style.footer}>
         <span className={style.time}>{time}</span>
         <div className={style.student}>

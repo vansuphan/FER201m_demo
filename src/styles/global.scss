@@ -2,6 +2,68 @@
 // @import url('../assets/fonts/orbitron/orbitron-stylesheet.scss');
 // @import url('../assets/fonts/inter/inter-stylesheet.scss');
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.nav-item{
+  cursor: pointer;
+}
+
+.nav-item:hover .nav-link:nth-child(1){
+  color: black;
+  font-weight: bold;
+}
+
+.nav-link{
+  transition: all 0.2s linear;
+}
+
+.nav-link:nth-child(1){
+  font-weight: bold;
+}
+
+/* custome css slider slick*/
+
+.Categories_cate-body__drl9r .slick-list{
+  margin-right: -15px !important;
+}
+
+.Skills_skill-body__SDPOX .slick-list{
+  margin-right: -46px !important;
+}
+
+.slick-prev{
+  z-index: 1;
+  left: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+/* .slick-prev:hover ,
+.slick-next:hover {
+  background: #09B451 !important;  
+  color: #fff !important;
+} */
+
+.slick-next{
+  z-index: 1;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+
 html,
 body {
   padding: 0 !important;

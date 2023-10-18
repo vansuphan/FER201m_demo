@@ -1,0 +1,54 @@
+#student-first-steps * {
+	font-family: "Poppins";
+}
+
+#student-first-steps{
+  margin-top: 100px;
+}
+
+#student-first-steps .student-steps {
+  background: url(./assets/it.png) black;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#student-first-steps .student-steps .student-image img {
+  overflow: hidden;
+}
+#student-first-steps .student-steps .student-image img {
+  border-radius: 1.5rem;
+  position: relative;
+  bottom: 15%;
+  width: 70%;
+}
+
+#student-first-steps .student-info .student-msg * {
+  color: white;
+}
+#student-first-steps .student-info .student-msg h1 {
+  font-weight: bold;
+}
+
+#student-first-steps .student-buttons button {
+  width: 10rem;
+  aspect-ratio: 3;
+  border: none;
+  border-radius: 0.2rem;
+}
+#student-first-steps .student-buttons button:first-child {
+  background: #09b451;
+  color: white;
+  transition: all 0.5s;
+}
+#student-first-steps .student-buttons button:first-child:hover {
+  background: white;
+  color: #09b451;
+}
+#student-first-steps .student-buttons button:last-child {
+  background: #e7faef;
+  color: #09b451;
+  transition: all 0.5s;
+}
+#student-first-steps .student-buttons button:last-child:hover {
+  background: white;
+}

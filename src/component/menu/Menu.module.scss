@@ -1,0 +1,77 @@
+
+.menu{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background: #fff;
+
+    .menu-items:nth-child(1){
+        color: #404040CC;   
+    }
+
+    .title{
+        font-family: Source Sans Pro;
+        font-size: 33px;
+        font-weight: 600;
+        line-height: 41px;
+        letter-spacing: 0em;
+        text-align: left;
+        position: relative;
+    }
+
+    .title::after{
+        content: '.';
+        color: #09B451;
+        font-size: 40px;
+        position: absolute;
+        left: 97px;
+        top: -20px;
+    }
+
+    .title::before{
+        content: '.';
+        color: #09B451;
+        font-size: 40px;
+        position: absolute;
+        left: 113px;
+        top: -20px;
+    }
+    
+    .action-user{
+        display: flex;
+        justify-content: flex-end;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        svg{
+            cursor: pointer;
+            font-size: 20px;
+            position: relative;
+            top: 10px;
+        }
+
+        .login{
+            cursor: pointer;
+            color: #09B451;
+            padding: 10px 20px;
+        }
+
+        .register{
+            cursor: pointer;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background: #09B451;
+            color: #fff;
+            padding: 10px 15px;
+
+            &:hover{
+                border: 1px solid #09B451;
+                background: #fff;
+                color: #09B451;
+            }
+        }
+    }
+}

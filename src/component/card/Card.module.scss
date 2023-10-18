@@ -1,0 +1,87 @@
+
+
+.card{
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px #CBCBCB40;
+    transition: all 0.2s linear;
+
+    &:hover{
+        transform: translateY(-20px);
+    }
+
+    .image-main{
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-content{
+        padding: 15px;
+        .title{
+            display: flex;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 36px;
+            letter-spacing: 0em;
+            p{
+                flex-basis: 80%;
+            }
+
+            .rating{
+                flex-basis: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 46px;
+                font-size: 16px;
+                img{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+        }
+
+        .number{
+            display: flex;
+            align-items: center;
+            .week{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-right: 30px;
+            }
+
+            .student{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                i{
+                    color: #09B451;
+                    font-size: 14px;
+                    margin-right: 5px;
+                }
+            }
+
+            .price{
+                font-size: 24px;
+                color: #09B451;
+                margin-left: 95px;
+                font-weight: 600;
+                line-height: 36px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+        }
+    }
+
+
+
+}

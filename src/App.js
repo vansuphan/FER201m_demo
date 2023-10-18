@@ -1,6 +1,7 @@
 import "./styles/global.scss";
 import { Route, Routes, useLocation } from "react-router-dom";
-import HomePage from "./pages/home/HomePage";
+// import HomePage from "./pages/home/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import NewsPage from "./pages/news/NewsPage";
 import LoginPage from "./pages/login/LoginPage";
 import ContactPage from "./pages/contact/ContactPage";
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavigationStrap />
+      {/* <NavigationStrap /> */}
       <TransitionGroup>
         <CSSTransition
           timeout={duration}
