@@ -1,31 +1,9 @@
 import style from './Courses.module.scss'
-// import { courses } from '../../data/course';
+import { courses } from '../../data/course';
 import Card from '../../components/carrd/Card';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { FadeIn } from 'react-animated-components';
 
 export default function Courses() {
-
-  const [courses, setCourses] = useState([]);
-
-  const getCourses = () => {
-    axios.get(process.env.REACT_APP_API_URL + '/courses').then(
-      (res) => {
-        if (res?.data) {
-          setCourses(res?.data);
-        }
-      }
-    )
-      .catch((error) => {
-        console.log(error)
-      })
-  }
-
-  useEffect(() => {
-    getCourses();
-  }, []);
-
-
   return (
     <div>
       <div className={style['courses-header']}>
@@ -38,14 +16,16 @@ export default function Courses() {
       <div className='row g-5'>
         {courses && courses?.length && courses?.map((course, index) => (
           <div className='col-md-4 col-sm-6' key={index}>
-            <Card
-              image={process.env.REACT_APP_API_URL + "/" +course.image}
-              title={course.title}
-              range={course.rate}
-              time={course.weeks}
-              student={course.students}
-              monney={course.price}
-            />
+            <FadeIn delayMs={100 + index * 200} durationMs={1000}>
+              <Card
+                image={process.env.REACT_APP_API_URL + "/" + course.image}
+                title={course.title}
+                range={course.rate}
+                time={course.weeks}
+                student={course.students}
+                monney={course.price}
+              />
+            </FadeIn>
           </div>
         ))}
       </div>

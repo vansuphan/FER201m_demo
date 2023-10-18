@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './Categories.module.scss'
 import market from '../../asserts/image/market.png'
 import leftArrow from '../../asserts/image/left-arrow.png'
@@ -9,6 +9,8 @@ import Slider from "react-slick";
 
 
 export default function Categories(props = {}) {
+
+  const [cartegories, setCartegories] = useState([]);
 
   var settings = {
     dots: false,
@@ -23,6 +25,11 @@ export default function Categories(props = {}) {
     ...props
   };
 
+  const getCartegories = () => {
+  
+  }
+
+
   return (
     <div>
       <div className={style['cate-header']}>
@@ -32,7 +39,7 @@ export default function Categories(props = {}) {
 
       <div className={style['cate-body']}>        
         <Slider {...settings}>
-          {[1,2,3,4,5,6,7].map((ele, index) => (
+          {[1, 2, 3, 4, 5, 6, 7].map((ele, index) => (
             <div key={index} className={style[`cate-item`]}>
                 <img alt='market' src={market}/>
                 <div className={style['cate-detail']}>
@@ -51,4 +58,20 @@ export default function Categories(props = {}) {
       </div>
     </div>     
   )
+}
+
+const Item = ({ title = "Marketing", index }) => {
+  <div key={index} className={style[`cate-item`]}>
+    <img alt='market' src={market} />
+    <div className={style['cate-detail']}>
+      <div className={style['title']}>{title}</div>
+      <div className={style['content']}>
+        is the process of exploring, creating, and delivering value to meet the needs of a
+        target market in terms of goods and services; potentially including selection of a
+        target audience; selection of certain attributes or themes to emphasize in advertising;
+        operation of advertising campaigns; attendance at trade shows and public events;
+        design of products and packaging attractive to buyers;
+      </div>
+    </div>
+  </div>
 }

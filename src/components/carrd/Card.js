@@ -34,10 +34,11 @@ export default function Card({
         </span>
       </div>
       <div className={style.footer}>
-        <span className={style.time}>{time}</span>
+        <span className={style.time}>{time + " Weeks"}</span>
         <div className={style.student}>
           <img src={Demo1_icon} alt="" />
-          <span>{student}</span>
+          {` `}
+          <span>{student/1000 + "K Students"}</span>
         </div>
         <h3 className={style.monney}>{monney}</h3>
       </div>

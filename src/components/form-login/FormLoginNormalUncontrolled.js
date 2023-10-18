@@ -49,7 +49,6 @@ export default function FormLoginNormalUncontrolled() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
     if (
       usernameRef?.current?.value.trim() === "" ||
       passwordRef?.current?.value.trim() === "" ||
@@ -62,10 +61,12 @@ export default function FormLoginNormalUncontrolled() {
         username: null,
         password: null,
       });
-      return {
+      const dataSubmit = {
         username: usernameRef?.current?.value,
         password: passwordRef?.current?.value,
-      };
+      }
+      console.log(dataSubmit);
+      return dataSubmit;
     }
   };
 

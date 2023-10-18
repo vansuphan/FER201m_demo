@@ -9,40 +9,40 @@ import style from './Skills.module.scss'
 
 export default function Skills() {
 
-    var settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay : true,
-        autoplaySpeed : 2000,
-        prevArrow : <img src={leftArrow} alt="" />,
-        nextArrow : <img src={rightArrow} alt="" />,
-      };
-    
-    return (
-        <div>
-            <div className={style['skill-header']}>
-                Learn a new skill in two hours
-            </div>
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    prevArrow: <img src={leftArrow} alt="" />,
+    nextArrow: <img src={rightArrow} alt="" />,
+  };
 
-            <div className={style['skill-body']}>        
-                <Slider {...settings}>
-                    {skills.map((skill, index) => (
-                        <div className={style['skill-item']} key={index}>
-                            <Card
-                                urlImg = {skill.image}
-                                title = {skill.title}
-                                rating = {skill.rate}
-                                numWeek = {skill.weeks}
-                                numStudent = {skill.students}
-                                price = {skill.price}
-                            />
-                        </div>
-                    ))}
-                </Slider>
+  return (
+    <div>
+      <div className={style['skill-header']}>
+        Learn a new skill in two hours
+      </div>
+
+      <div className={style['skill-body']}>
+        <Slider {...settings}>
+          {skills.map((skill, index) => (
+            <div className={style['skill-item']} key={index}>
+              <Card
+                urlImg={process.env.REACT_APP_API_URL + skill.image}
+                title={skill.title}
+                rating={skill.rate}
+                numWeek={skill.weeks}
+                numStudent={skill.students}
+                price={skill.price}
+              />
             </div>
-        </div>     
-    )
+          ))}
+        </Slider>
+      </div>
+    </div>
+  )
 }

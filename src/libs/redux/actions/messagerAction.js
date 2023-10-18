@@ -1,9 +1,10 @@
+import { messagesService } from "../../services/messagesService";
 import { MessagerType } from "../types/messagerType";
 
 export const getMessager = () => {
   return (dispatch) => {
     dispatch(messagerAction.get());
-    fetch("http://localhost:8080/messages").then(
+    messagesService.getMessages().then(
       async (response) => {
         const converData = await response.json();
         setTimeout(() => {

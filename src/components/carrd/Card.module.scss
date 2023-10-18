@@ -43,17 +43,19 @@
 }
 
 .time{
-
+font-weight: bold;
 }
 
 .student {
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 .student img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  margin-top: -2px;
 }
 
 .monney{
