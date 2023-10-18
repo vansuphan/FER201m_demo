@@ -23,13 +23,16 @@
     line-height: normal;
 
     span {
-      color: #0089ED;
+      color: #09B451;
       font-family: Poppins;
       font-size: 21px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
     }
+  }
+  a{
+    color: #09B451;
   }
 }
 
@@ -63,7 +66,7 @@
     line-height: normal;
 
     border-radius: 10px;
-    background: #0089ED;
+    background: #09B451;
     box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.30);
     border: unset;
     height: 54px;
@@ -73,6 +76,7 @@
   a{
     margin-left: auto;
     padding: 10px 0;
+    color: #09B451;
   }
   ::placeholder{
     color: #808080;
@@ -93,7 +97,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 9px;
-    background: #F6F6F6;
+    background: #eeffe9;
     border: none;
     padding: 10px 20px;
     img{
@@ -101,7 +105,7 @@
     }
     span{
       margin-left: 10px;
-      color: #4285F4;
+      color: #09B451;
       font-family: Poppins;
       font-size: 16px;
       font-style: normal;
@@ -111,7 +115,7 @@
     
   }
   button:first-child{
-    background: #E9F1FF;
+    background: #eeffe9;
     flex: 1;
   }
   button:last-child{

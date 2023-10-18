@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Categories.module.scss'
 import market from '../../asserts/image/market.png'
 import leftArrow from '../../asserts/image/left-arrow.png'
@@ -6,11 +6,12 @@ import rightArrow from '../../asserts/image/right-arrow.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { landingPageService } from '../../libs/services/landing-page-service'
 
 
 export default function Categories(props = {}) {
 
-  const [cartegories, setCartegories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   var settings = {
     dots: false,
@@ -18,16 +19,29 @@ export default function Categories(props = {}) {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay : true,
-    autoplaySpeed : 2000,
-    prevArrow : <img src={leftArrow} alt="" />,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    prevArrow: <img src={leftArrow} alt="" />,
     nextArrow: <img src={rightArrow} alt="" />,
     ...props
   };
 
   const getCartegories = () => {
-  
+    landingPageService.getCategories().then(
+      (res) => {
+        if (res?.data) {
+          setCategories(res.data);
+        }
+      }
+    )
+      .catch(err => {
+        console.log(err);
+      })
   }
+
+  useEffect(() => {
+    getCartegories();
+  }, [])
 
 
   return (
@@ -37,41 +51,25 @@ export default function Categories(props = {}) {
         <div className={style['cate-header__action']}>See all</div>
       </div>
 
-      <div className={style['cate-body']}>        
+      <div className={style['cate-body']}>
         <Slider {...settings}>
-          {[1, 2, 3, 4, 5, 6, 7].map((ele, index) => (
+          {categories && categories?.length > 0 && categories.map((item, index) => (
             <div key={index} className={style[`cate-item`]}>
-                <img alt='market' src={market}/>
-                <div className={style['cate-detail']}>
-                  <div className={style['title']}>Marketing</div>
-                  <div className={style['content']}>
-                    is the process of exploring, creating, and delivering value to meet the needs of a
-                    target market in terms of goods and services; potentially including selection of a 
-                    target audience; selection of certain attributes or themes to emphasize in advertising; 
-                    operation of advertising campaigns; attendance at trade shows and public events; 
-                    design of products and packaging attractive to buyers;
-                  </div>
+              <img className={style['cate-img']} alt='market' src={item?.image} />
+              <div className={style['cate-detail']}>
+                <div className={style['title']}>{item?.title}</div>
+                <div className={style['content']}>
+                  is the process of exploring, creating, and delivering value to meet the needs of a
+                  target market in terms of goods and services; potentially including selection of a
+                  target audience; selection of certain attributes or themes to emphasize in advertising;
+                  operation of advertising campaigns; attendance at trade shows and public events;
+                  design of products and packaging attractive to buyers;
                 </div>
+              </div>
             </div>
           ))}
         </Slider>
       </div>
-    </div>     
-  )
-}
-
-const Item = ({ title = "Marketing", index }) => {
-  <div key={index} className={style[`cate-item`]}>
-    <img alt='market' src={market} />
-    <div className={style['cate-detail']}>
-      <div className={style['title']}>{title}</div>
-      <div className={style['content']}>
-        is the process of exploring, creating, and delivering value to meet the needs of a
-        target market in terms of goods and services; potentially including selection of a
-        target audience; selection of certain attributes or themes to emphasize in advertising;
-        operation of advertising campaigns; attendance at trade shows and public events;
-        design of products and packaging attractive to buyers;
-      </div>
     </div>
-  </div>
+  )
 }

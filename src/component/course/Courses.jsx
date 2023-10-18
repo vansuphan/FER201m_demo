@@ -18,7 +18,7 @@ export default function Courses() {
           <div className='col-md-4 col-sm-6' key={index}>
             <FadeIn delayMs={100 + index * 200} durationMs={1000}>
               <Card
-                image={process.env.REACT_APP_API_URL + "/" + course.image}
+                image={course.image}
                 title={course.title}
                 range={course.rate}
                 time={course.weeks}
