@@ -7,18 +7,15 @@ import Ellipse3 from "../../assets/images/Ellipse3.png";
 import Ellipse4 from "../../assets/images/Ellipse4.png";
 import CancelIcon from "../../assets/icons/icon-cancel.png";
 import FormLoginNormalUncontrolled from "../../components/form-login/FormLoginNormalUncontrolled";
-import { useNavigate } from "react-router-dom";
 import Menu from "../../component/menu/Menu";
 
 export default function LoginPage() {
-  const navigate = useNavigate();
 
   return (
     <div className={styles.LoginPage}>
       <section className={styles.Content}>
         <div className={styles.container}>
           <div className={styles.menu}>
-            {/* <h3 onClick={() => navigate('/home')}>Home</h3> */}
             <Menu bgTransparent hideBtnLogin/>
           </div>
           <div className={styles.Des}>

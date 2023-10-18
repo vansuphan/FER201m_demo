@@ -16,7 +16,7 @@ export default function Menu({bgTransparent = false, hideBtnLogin = false}) {
         <div className={`collapse navbar-collapse d-flex justify-content-center`} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className={`nav-link ${style['menu-items']}`} aria-current="page" href="#">Home</a>
+              <a className={`nav-link ${style['menu-items']}`} aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
               <a className={`nav-link ${style['menu-items']}`} href="#">Courses</a>
@@ -28,7 +28,7 @@ export default function Menu({bgTransparent = false, hideBtnLogin = false}) {
               <a className={`nav-link ${style['menu-items']}`} href="#">Schedules</a>
             </li>
             <li className="nav-item">
-              <NavLink className={`nav-link ${style['menu-items']}`} to={{ pathname: "/home" }}>Contact Us</NavLink>
+              <NavLink className={`nav-link ${style['menu-items']}`} to={{ pathname: "/contact" }}>Contact Us</NavLink>
             </li>
           </ul>
         </div>

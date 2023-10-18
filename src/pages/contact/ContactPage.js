@@ -12,6 +12,9 @@ export default function ContactPage() {
     console.log(data);
   }
   return (
-    <FormContact handleSubmit={submit}/>
+    <div>
+      <h2>Contact Page</h2>
+      {/* <FormContact handleSubmit={submit}/> */}
+    </div>
   )
 }
