@@ -8,16 +8,13 @@ import Card from '../card/Card';
 import style from './Skills.module.scss'
 
 export default function Skills() {
-
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <img {...props} src={leftArrow} alt="" />
   );
-  
   const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
     <img {...props} src={rightArrow} alt="" />
   );
-
-  var settings = {
+  let settings = {
     dots: false,
     infinite: true,
     speed: 500,
