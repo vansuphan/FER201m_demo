@@ -9,6 +9,14 @@ import style from './Skills.module.scss'
 
 export default function Skills() {
 
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <img {...props} src={leftArrow} alt="" />
+  );
+  
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <img {...props} src={rightArrow} alt="" />
+  );
+
   var settings = {
     dots: false,
     infinite: true,
@@ -17,8 +25,8 @@ export default function Skills() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    prevArrow: <img src={leftArrow} alt="" />,
-    nextArrow: <img src={rightArrow} alt="" />,
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
   };
 
   return (

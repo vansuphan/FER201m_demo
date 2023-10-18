@@ -4,17 +4,12 @@ import HomePage from "./pages/HomePage/HomePage";
 import NewsPage from "./pages/news/NewsPage";
 import LoginPage from "./pages/login/LoginPage";
 import ContactPage from "./pages/contact/ContactPage";
-import { useEffect } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const duration = 300;
 
 function App() {
   let location = useLocation();
-
-  useEffect(() => {
-    console.log("location: ", location);
-  }, [location]);
 
   return (
     <div className="App">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import style from './Categories.module.scss'
-import market from '../../asserts/image/market.png'
 import leftArrow from '../../asserts/image/left-arrow.png'
 import rightArrow from '../../asserts/image/right-arrow.png'
 import "slick-carousel/slick/slick.css";
@@ -8,12 +7,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { landingPageService } from '../../libs/services/landing-page-service'
 
-
 export default function Categories(props = {}) {
-
   const [categories, setCategories] = useState([]);
-
-  var settings = {
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <img {...props} src={leftArrow} alt="" />
+  );
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <img {...props} src={rightArrow} alt="" />
+  );
+  let settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -21,8 +23,8 @@ export default function Categories(props = {}) {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    prevArrow: <img src={leftArrow} alt="" />,
-    nextArrow: <img src={rightArrow} alt="" />,
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
     ...props
   };
 
