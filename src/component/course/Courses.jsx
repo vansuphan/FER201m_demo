@@ -5,7 +5,7 @@ import { FadeIn } from 'react-animated-components';
 
 export default function Courses() {
   return (
-    <div>
+    <div id='courses'>
       <div className={style['courses-header']}>
         <div className={style['title']}>Most Popular courses</div>
         <div className={style['sort']}>

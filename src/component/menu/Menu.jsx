@@ -19,7 +19,7 @@ export default function Menu({bgTransparent = false, hideBtnLogin = false}) {
               <a className={`nav-link ${style['menu-items']}`} aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${style['menu-items']}`} href="#">Courses</a>
+              <a className={`nav-link ${style['menu-items']}`} href="#courses">Courses</a>
             </li>
             <li className="nav-item">
               <a className={`nav-link ${style['menu-items']}`} href="#">Instructors</a>

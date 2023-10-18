@@ -37,7 +37,7 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <div className={style['skill-item']} key={index}>
               <Card
-                urlImg={process.env.REACT_APP_API_URL + skill.image}
+                urlImg={skill.image}
                 title={skill.title}
                 rating={skill.rate}
                 numWeek={skill.weeks}
