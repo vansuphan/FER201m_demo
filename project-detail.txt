@@ -1,0 +1,27 @@
+FER201m
+admin: 
+1. Đăng nhập, đăng xuất
+2. Admin, phân quyền quản lý user
+- Yêu cầu: 
+  + Khi chưa đăng nhập user truy cập vào admin portal sẽ redirects sang trang login.
+  + User đăng nhập vào với role gì sẽ hiển thị UI đúng với role của user đó.
+  + Admin có quyền tìm kiếm, tạo, sửa, xoá user (TEACHER, STUDENT)
+  + Xem nhận các request, feedback từ giảng viên và sinh viên.
+
+3. Quản lý giảng viên:
+  + Giảng viên không có quyền thêm sửa xoá các user khác
+  + Giảng viên có các quyền: 
+    - Xem sửa các thông tin cá nhân.
+    - Xem, tìm kiếm các lớp được assign
+    - Xem thông tin sinh viên trong class được assign.
+    - Tạo request chuyển lịch học
+    - Xem lịch dạy
+
+4. quản lý sinh viên:
+  + Sinh viên không có quyền thêm sửa xoá các user khác
+  + Sinh viên có các quyền: 
+    - Xem sửa các thông tin cá nhân.
+    - Xem, tìm kiếm các lớp được assign.
+    - Xem thông tin sinh viên trong class được assign.
+    - Tạo feedback.
+    - Xem lịch học.

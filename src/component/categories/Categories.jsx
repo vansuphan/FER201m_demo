@@ -6,7 +6,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { landingPageService } from '../../libs/services/landing-page-service'
-
+// import {encode, decode} from 'string-encode-decode'
+// const test = {name: "test", email: 'test@example.com', password: "test"};
+// const encryptedString =encode(JSON.stringify(test));
+// const decryptedString = decode(encryptedString);
+// const dataJson = JSON.parse(decryptedString);
+  
 export default function Categories(props = {}) {
   const [categories, setCategories] = useState([]);
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
