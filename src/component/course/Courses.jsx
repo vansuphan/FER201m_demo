@@ -1,7 +1,7 @@
 import style from './Courses.module.scss'
-import { courses } from '../../data/course';
-import Card from '../../components/carrd/Card';
 import { FadeIn } from 'react-animated-components';
+import Card from '../../components/carrd/Card';
+import { courses } from '../../data/course';
 
 export default function Courses() {
   return (
@@ -16,16 +16,14 @@ export default function Courses() {
       <div className='row g-5'>
         {courses && courses?.length && courses?.map((course, index) => (
           <div className='col-md-4 col-sm-6' key={index}>
-            <FadeIn delayMs={100 + index * 200} durationMs={1000}>
-              <Card
-                image={course.image}
-                title={course.title}
-                range={course.rate}
-                time={course.weeks}
-                student={course.students}
-                monney={course.price}
-              />
-            </FadeIn>
+            <Card
+              image={course.image}
+              title={course.title}
+              range={course.rate}
+              time={course.weeks}
+              student={course.students}
+              monney={course.price}
+            />
           </div>
         ))}
       </div>

@@ -23,7 +23,6 @@ function App() {
           <Routes location={location}>
             <Route path="/" Component={HomePage} />
             <Route path="/home" Component={HomePage} />
-            <Route path="/login" Component={LoginPage} />
             <Route path="/contact" Component={ContactPage} />
             <Route path="/news/:id" Component={NewsPage} />
             <Route path="/*" Component={() => <div>Not Found</div>} />

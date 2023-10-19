@@ -4,7 +4,7 @@ import style from '../menu/Menu.module.scss'
 import { useNavigate } from 'react-router-dom'
 import { NavLink } from 'react-router-dom';
 
-export default function Menu({bgTransparent = false, hideBtnLogin = false}) {
+export default function Menu({ bgTransparent = false, hideBtnLogin = false }) {
 
   return (
     <div className={`navbar ${style.menu} navbar-expand-lg`} style={{backgroundColor: bgTransparent ? "transparent" : "#fff"}}>
@@ -19,16 +19,16 @@ export default function Menu({bgTransparent = false, hideBtnLogin = false}) {
               <a className={`nav-link ${style['menu-items']}`} aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${style['menu-items']}`} href="#courses">Courses</a>
+              <a className={`nav-link ${style['menu-items']}`} href="/courses">Courses</a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${style['menu-items']}`} href="#">Instructors</a>
+              <a className={`nav-link ${style['menu-items']}`} href="/instructors">Instructors</a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${style['menu-items']}`} href="#">Schedules</a>
+              <a className={`nav-link ${style['menu-items']}`} href="/schedules">Schedules</a>
             </li>
             <li className="nav-item">
-              <NavLink className={`nav-link ${style['menu-items']}`} to={{ pathname: "/contact" }}>Contact Us</NavLink>
+              <a className={`nav-link ${style['menu-items']}`} href="/contact">Contact Us</a>
             </li>
           </ul>
         </div>
