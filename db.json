@@ -13,23 +13,9 @@
       "role": "TEACHER"
     },
     {
-      "id": 4,
-      "username": "student@fpt.com",
-      "password": "student@123",
-      "role": "STUDENT"
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "username": "admin@fpt.com",
-      "password": "admin@123",
-      "role": "ADMIN"
-    },
-    {
-      "id": 2,
-      "username": "supv@fpt.com",
-      "password": "su@123",
+      "id": 3,
+      "username": "teacher2@fpt.com",
+      "password": "teacher2@123",
       "role": "TEACHER"
     },
     {
@@ -37,26 +23,54 @@
       "username": "student@fpt.com",
       "password": "student@123",
       "role": "STUDENT"
+    },
+    {
+      "id": 5,
+      "username": "student2@fpt.com",
+      "password": "student2@123",
+      "role": "STUDENT"
     }
   ],
-  "profile": [
+  "users": [
     {
       "id": 1,
+      "username": "admin@fpt.com",
+      "role": "ADMIN",
       "name": "Administrator",
       "email": "admin@fpt.com",
       "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg"
     },
     {
       "id": 2,
-      "name": "Su Phan",
-      "email": "supv@fpt.com",
-      "image": "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-1/286840873_5149156201865276_8221701214692303290_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CuAqs7qE8HgAX9FrwLA&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfB29538z3EtV8o9zastsuZ7NCsOceQ7GZrIp9PJGYdkPg&oe=65337296"
+      "username": "teacher@fpt.com",
+      "role": "TEACHER",
+      "name": "teacher",
+      "email": "teacher@fpt.com",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg"
+    },
+    {
+      "id": 3,
+      "username": "teacher2@fpt.com",
+      "role": "TEACHER",
+      "name": "teacher2",
+      "email": "teacher2@fpt.com",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg"
     },
     {
       "id": 4,
-      "name": "Student 4",
-      "email": "supv@fpt.com",
-      "image": "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-1/286840873_5149156201865276_8221701214692303290_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CuAqs7qE8HgAX9FrwLA&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfB29538z3EtV8o9zastsuZ7NCsOceQ7GZrIp9PJGYdkPg&oe=65337296"
+      "username": "student@fpt.com",
+      "role": "STUDENT",
+      "name": "student",
+      "email": "student@fpt.com",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg"
+    },
+    {
+      "id": 5,
+      "username": "student2@fpt.com",
+      "role": "STUDENT",
+      "name": "student2",
+      "email": "student2@fpt.com",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idapel7w8ikn/b/user-photo-test2/o/11699_AVATAR_1693551684037.jpg"
     }
   ],
   "posts": [
