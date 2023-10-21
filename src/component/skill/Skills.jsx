@@ -3,9 +3,11 @@ import rightArrow from '../../asserts/image/right-arrow.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { skills } from '../../data/skills';
+// import { skills } from '../../data/skills';
 import Card from '../card/Card';
 import style from './Skills.module.scss'
+import { useState, useEffect } from 'react';
+import { landingPageService } from '../../libs/services/landing-page-service';
 
 export default function Skills() {
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
@@ -26,6 +28,20 @@ export default function Skills() {
     nextArrow: <SlickArrowRight />,
   };
 
+  const [skills, setSkills] = useState([]);
+
+  const getSkills = () => {
+    landingPageService.getSkills()
+      .then((response) => {
+        setSkills(response?.data); 
+      }
+      )
+  }
+
+  useEffect(() => {
+    getSkills();
+  }, [])
+
   return (
     <div>
       <div className={style['skill-header']}>
@@ -34,7 +50,7 @@ export default function Skills() {
 
       <div className={style['skill-body']}>
         <Slider {...settings}>
-          {skills.map((skill, index) => (
+          {skills && skills?.length && skills.map((skill, index) => (
             <div className={style['skill-item']} key={index}>
               <Card
                 urlImg={skill.image}

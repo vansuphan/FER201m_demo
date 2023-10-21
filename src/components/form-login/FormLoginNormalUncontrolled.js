@@ -2,15 +2,18 @@
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./FormLogin.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleIcon from "../../assets/icons/google.png";
 import FbIcon from "../../assets/icons/facebook.png";
 import AppleIcon from "../../assets/icons/apple.png";
+import { adminPortalService } from "../../libs/services/admin-portal-service";
+import { notification } from "antd";
 
 export default function FormLoginNormalUncontrolled() {
   const [error, setError] = useState({ username: null, password: null });
   const usernameRef = useRef("");
   const passwordRef = useRef("");
+  const navigation = useNavigate();
 
   const onValidationsForm = () => {
     let errorData = {
@@ -65,7 +68,31 @@ export default function FormLoginNormalUncontrolled() {
       const dataSubmit = {
         username: usernameRef?.current?.value,
         password: passwordRef?.current?.value,
-      }
+      };
+
+      adminPortalService
+        .login()
+        .then((res) => {
+          console.log(res);
+          const users = res.data?.filter((user, index) => {
+            if (
+              user?.password === dataSubmit.password &&
+              user?.username === dataSubmit.username
+            ) {
+              return user;
+            }
+          });
+          if (users.length > 0) {
+            localStorage.setItem('users', JSON.stringify(users[0]));
+            navigation("/admin-portal");
+          } else {
+            notification.error({ message: "Username or password is wrong" });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
       console.log(dataSubmit);
       return dataSubmit;
     }

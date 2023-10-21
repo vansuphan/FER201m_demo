@@ -5,6 +5,8 @@ import NewsPage from "./pages/news/NewsPage";
 import LoginPage from "./pages/login/LoginPage";
 import ContactPage from "./pages/contact/ContactPage";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import PrivateRouter from "./components/private-router/PrivateRouter";
+import AdminPortal from "./pages/admin-portal/AdminPortal";
 
 const duration = 300;
 
@@ -25,6 +27,12 @@ function App() {
             <Route path="/home" Component={HomePage} />
             <Route path="/contact" Component={ContactPage} />
             <Route path="/news/:id" Component={NewsPage} />
+            <Route path="/admin-portal" element={
+              <PrivateRouter>
+                <AdminPortal />
+              </PrivateRouter>
+            } />
+            <Route path="/login" Component={LoginPage} />
             <Route path="/*" Component={() => <div>Not Found</div>} />
           </Routes>
         </CSSTransition>
