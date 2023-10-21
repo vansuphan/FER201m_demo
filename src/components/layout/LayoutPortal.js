@@ -37,13 +37,14 @@ const LayoutPortal = ({ children }) => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-  let userFromLocalStorage = JSON.parse(localStorage.getItem('user'));
+  let userFromLocalStorage = JSON.parse(localStorage.getItem('users'));
   const [user, setUser] = useState({});
   useEffect(() => {
     if (userFromLocalStorage) {
       adminPortalService.getUser(userFromLocalStorage?.id).then(
         (res) => {
           console.log(res);
+          setUser(res?.data);
         }
       );
     }
